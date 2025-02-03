@@ -26,16 +26,16 @@ const logger = winston.createLogger({
 });
 
 // Redis for caching and request counting
-const redis = new Redis('redis://red-cuce0arv2p9s73d69a40:6379');
+const redis = new Redis('redis:/127.0.0.1:6379');
 redis.on('error', (err) => {
   logger.error('Redis error:', err);
 });
 
 // Cloudinary configuration (use environment variables in production)
 cloudinary.config({
-  cloud_name: 'dnpgy8hxk',
-  api_key: '742172293976992',
-  api_secret: 'ckxM91P-KN3P7SuKLlGmo5oBVsE',
+  cloud_name: 'ENTER',
+  api_key: 'ENTER',
+  api_secret: 'ENTER',
 });
 
 // Middleware to parse JSON
@@ -44,7 +44,7 @@ app.use(express.json());
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:8080', // Frontend origin
-  'https://instagmdl.blogspot.com', // Your blog domain
+  'https://exmple.com', // Your blog domain
 ];
 
 const corsOptions = {
