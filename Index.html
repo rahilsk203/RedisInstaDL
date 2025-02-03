@@ -1,0 +1,265 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Download Instagram media as MP3 or MP4 quickly and easily." name="description"/>
+  <meta content="Instagram downloader, MP3, MP4, download Instagram videos, download Instagram photos" name="keywords"/>
+  <title>
+   InstaDL - Download Instagram Media Easily
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100 text-gray-800">
+  <header class="bg-white shadow-md">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">
+     InstaDL
+    </h1>
+    <button class="block md:hidden text-gray-600 focus:outline-none" id="menu-button">
+     <i class="fas fa-bars"></i>
+    </button>
+    <nav class="hidden md:flex space-x-4" id="menu">
+     <ul class="flex flex-col md:flex-row md:space-x-4">
+      <li>
+       <a class="text-gray-600 hover:text-blue-600" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-600 hover:text-blue-600" href="#">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-600 hover:text-blue-600" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+    <ul class="flex flex-col space-y-2 p-4">
+     <li>
+      <a class="text-gray-600 hover:text-blue-600" href="#">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="text-gray-600 hover:text-blue-600" href="#">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="text-gray-600 hover:text-blue-600" href="#">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <section class="bg-white text-gray-800 py-12">
+   <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">
+     Download Instagram Media Easily
+    </h2>
+    <p class="text-lg mb-8">
+     Quickly download Instagram videos and photos in MP3 or MP4 format.
+    </p>
+   </div>
+  </section>
+  <main class="container mx-auto px-4 py-8">
+   <div class="bg-white shadow-md rounded-lg p-6 max-w-lg mx-auto">
+    <h2 class="text-xl font-semibold mb-4">
+     Download Instagram Media
+    </h2>
+    <form class="space-y-4" id="downloadForm">
+     <div>
+      <label class="block text-gray-700" for="instagram-url">
+       Instagram URL
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded-md hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" id="instagram-url" placeholder="Paste Instagram URL here" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700" for="format">
+       Select Format
+      </label>
+      <select class="w-full p-2 border border-gray-300 rounded-md hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" id="format">
+       <option value="mp3">
+        MP3
+       </option>
+       <option value="mp4">
+        MP4
+       </option>
+      </select>
+     </div>
+     <div class="flex space-x-4">
+      <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700" id="downloadButton" type="button">
+       Download
+      </button>
+     </div>
+    </form>
+    <div class="hidden p-4 bg-gray-100 rounded-lg shadow-md mt-4" id="result">
+     <img alt="Thumbnail of the Instagram media" class="hidden w-full max-w-md mx-auto rounded-lg mb-4" id="thumbnail" src=""/>
+     <video class="hidden w-full max-w-md mx-auto rounded-lg mb-4" controls="" id="video">
+      <source id="videoSource" src="" type="video/mp4"/>
+      Your browser does not support the video tag.
+     </video>
+     <a class="inline-block px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300" href="#" id="downloadLink">
+      Download
+     </a>
+    </div>
+    <div class="hidden mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg" id="success">
+     <p class="text-center" id="successMessage">
+     </p>
+    </div>
+    <div class="hidden mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg" id="error">
+     <p class="text-center" id="errorMessage">
+     </p>
+    </div>
+   </div>
+   <div class="mt-8">
+    <img alt="Google Ad - 728x90 banner ad" class="w-full" height="90" src="https://storage.googleapis.com/a1aa/image/8xRuW4jCndbYC5s69nYDkwHDmE9WSbWiauuZ1zGtbRPuqeDKA.jpg" width="728"/>
+   </div>
+  </main>
+  <footer class="bg-white shadow-md mt-8">
+   <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+    <div class="text-gray-600">
+     <a class="hover:text-blue-600" href="#">
+      Privacy Policy
+     </a>
+     |
+     <a class="hover:text-blue-600" href="#">
+      Terms of Service
+     </a>
+    </div>
+    <div class="mt-4 md:mt-0">
+     <a class="text-gray-600 hover:text-blue-600 mx-2" href="#">
+      <i class="fab fa-facebook-f"></i>
+     </a>
+     <a class="text-gray-600 hover:text-blue-600 mx-2" href="#">
+      <i class="fab fa-twitter"></i>
+     </a>
+     <a class="text-gray-600 hover:text-blue-600 mx-2" href="#">
+      <i class="fab fa-instagram"></i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('downloadButton').addEventListener('click', async function() {
+            const url = document.getElementById('instagram-url').value.trim();
+            const format = document.getElementById('format').value;
+            const downloadButton = document.getElementById('downloadButton');
+
+            document.getElementById('success').classList.add('hidden');
+            document.getElementById('error').classList.add('hidden');
+            document.getElementById('thumbnail').classList.add('hidden');
+            document.getElementById('video').classList.add('hidden');
+            document.getElementById('result').classList.add('hidden');
+
+            if (!url || !url.includes('instagram.com')) {
+                showError('Please enter a valid Instagram URL.');
+                return;
+            }
+
+            downloadButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+            downloadButton.disabled = true;
+
+            try {
+                const response = await fetch('http://localhost:3000/download', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ url, format }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to process the request. Please try again.');
+                }
+
+                const data = await response.json();
+
+                if (!data.url) {
+                    throw new Error('No download URL found in the response.');
+                }
+
+                const fileResponse = await fetch(data.url);
+                if (!fileResponse.ok) {
+                    throw new Error('Failed to fetch the file.');
+                }
+
+                const blob = await fileResponse.blob();
+                const blobUrl = URL.createObjectURL(blob);
+
+                const filename = generateFilename(url, format);
+
+                const downloadLink = document.getElementById('downloadLink');
+                const thumbnail = document.getElementById('thumbnail');
+                const video = document.getElementById('video');
+                const videoSource = document.getElementById('videoSource');
+                const resultDiv = document.getElementById('result');
+
+                if (format === 'mp3') {
+                    thumbnail.src = data.thumbnail || '';
+                    thumbnail.classList.remove('hidden');
+                    video.classList.add('hidden');
+
+                    downloadLink.href = blobUrl;
+                    downloadLink.download = filename;
+                    downloadLink.textContent = `Download MP3`;
+                } else if (format === 'mp4') {
+                    videoSource.src = blobUrl;
+                    video.load();
+                    video.classList.remove('hidden');
+                    thumbnail.classList.add('hidden');
+
+                    downloadLink.href = blobUrl;
+                    downloadLink.download = filename;
+                    downloadLink.textContent = `Download MP4`;
+                }
+
+                resultDiv.classList.remove('hidden');
+
+                document.getElementById('successMessage').textContent = 'Download ready! Click the link to download.';
+                document.getElementById('success').classList.remove('hidden');
+            } catch (error) {
+                showError(error.message || 'An error occurred. Please try again.');
+            } finally {
+                downloadButton.innerHTML = 'Download';
+                downloadButton.disabled = false;
+            }
+        });
+
+        function generateFilename(url, format) {
+            const urlParts = url.split('/');
+            const identifier = urlParts[urlParts.length - 2];
+            return `instagram_${identifier}.${format}`;
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            const errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = message;
+            errorDiv.classList.remove('hidden');
+        }
+  </script>
+ </body>
+</html>
